@@ -16,7 +16,9 @@ router.post('/add', isloggedIn, (req, res, next)=>{
         fname: req.body.fname,
         lname: req.body.lname,
         experience: req.body.experience,
-        position: req.body.position
+        position: req.body.position,
+        batch: req.body.batch,
+        course: req.body.course
     });
     user.save().then((doc)=>{
         console.log('User added');

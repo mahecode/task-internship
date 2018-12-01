@@ -8,11 +8,11 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const validator = require('express-validator');
 const indexRouter = require('./routes/index');
-const userRouter = require('./routes/user');
+
 const adminRouter = require('./routes/admin');
 const app = express();
 
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/task');
 require('./config/passport');
@@ -45,7 +45,6 @@ app.use('/', (req, res, next)=>{
 });
 
 
-app.use('/user', userRouter);
 app.use('/admin', adminRouter);
 app.use('/', indexRouter);
 
