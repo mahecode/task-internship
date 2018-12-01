@@ -1,0 +1,19 @@
+
+  <nav>
+    <div class="nav-wrapper indigo darken-4">
+      <a href="/" class="brand-logo">Task</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li><a></a></li>
+            <li><a></a></li>
+            <li><a></a></li>
+            {{# if login }}
+               <li><a href="/admin/logout">Logout</a></li>
+            {{ else }}
+                <li><a href="/admin/admin-login">Admin Login</a></li>
+            {{/if}}
+         <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" href="/admin/add">
+        <i class="material-icons  blue darken-1">add</i>
+      </a>
+      </ul>
+    </div>
+  </nav>

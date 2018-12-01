@@ -1,0 +1,16 @@
+<br>
+<a href="/batch" class="waves-effect waves-light btn accent-3">BY BATCH YEAR</a> | <a href="/course" class="waves-effect waves-light btn accent-3">BY STUDY COURSE</a>
+<br>
+<div class="col s6">
+    <ul class="collection">
+        {{# each users }}
+                     <li class="collection-item avatar">
+                         <i class="material-icons circle red">play_arrow</i>
+                        <span class="title">{{ this.fname }} {{ this.lname }}</span>
+                        <p>{{ this.experience }} years of experience<br>
+                            {{ this.position }}
+                        </p>
+                    </li>
+        {{/each}}
+</ul>
+</div>
